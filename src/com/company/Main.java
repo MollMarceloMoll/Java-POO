@@ -22,6 +22,5 @@ class Coche {
         numeroDePuertas = puertas;
         velocidadMaxima = velocidad;
         velocidadActual = velocidadActua;
-        System.out.println("Estoy en el constructor");
     }
 }
