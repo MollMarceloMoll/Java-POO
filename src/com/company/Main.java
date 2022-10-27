@@ -22,6 +22,12 @@ public class Main {
         System.out.println(moto.getVelocidadMaxima());
         System.out.println(moto.getRapido());
 
+        Automovil automovil = new Automovil();
+        EjecutaAcelerar(automovil);
+
+    }
+    public static void EjecutaAcelerar(Car car){
+        car.Acelerar(15);
     }
 }
 class Vehiculo {
@@ -48,5 +54,20 @@ class Vehiculo {
     }
     public boolean getRapido() {
         return this.rapido;
+    }
+}
+
+// Interface
+interface Car {
+    void Acelerar(int cuantaVelocidad);
+    void Frenar(int cuantaVelocidad);
+}
+
+class Automovil implements Car {
+    public void Acelerar(int cuantaVelocidad){
+        System.out.println("Coche() -> Acelerar()");
+    }
+    public void Frenar(int cuantaVelocidad) {
+        System.out.println("Coche() -> Frenar()");
     }
 }
